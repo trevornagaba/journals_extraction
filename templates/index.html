@@ -1,0 +1,72 @@
+<!-- <h2>Request an request</h2>
+<form action="{% url 'api:request' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Extraction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+    <table class="table table-striped">
+        <thead>
+            <td><b>Field</b></td>
+            <td><b>Source</b></td>
+            <td><b>New name</b></td>
+            <td><b>Foreign Key</b></td>
+        </thead>
+        <tbody>
+            <!-- {{ field_list = ['GL', 'JOURNAL_ID', 'AUTOMATED_MANUAL', 'ENTRY_DATE', 'EFFECTIVE_DATE']}}
+            {% for field in field_list %} -->
+            <form>
+                <tr>
+                    <td>ACC</td>
+                    <td>
+                        <select>
+                          <option value="journal_dump">Journal dump</option>
+                          <option value="user_list">User list</option>
+                          <option value="chart_of_accounts">Chart of accounts</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                          <option value="Posting_Date">Posting_Date</option>
+                          <option value="Effective_Date">Effective_Date</option>
+                          <option value="Account">Account</option>
+                          <option value="Description">Description</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                          <option value="Journal_id">Journal_id</option>
+                          <option value="User_id">User_id</option>
+                          <option value="Account">Account</option>
+                        </select>
+                    </td>
+                </tr>
+                    <!-- <form action="http://127.0.0.1:5000/" method="POST">
+                        <input type="submit" value= JOURNAL_ID name="request_id" class='btn btn-primary'>
+                    </form> -->
+<!--             {% endfor%} -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <BUTTON type="submit" onclick="http://127.0.0.1:5000/submit" value="">
+                            Submit
+                        </BUTTON>
+                    </td>
+                </tr>
+            </form>
+    </tbody>
+    </table>
