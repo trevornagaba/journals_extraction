@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Extraction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+    <table class="table table-striped">
+        <thead>
+            <td><b>Field</b></td>
+            <td><b>Source file</b></td>
+            <td><b>Previous name</b></td>
+            <td><b>Foreign Key</b></td>
+        </thead>
+        <tbody>
+            <form>
+                {% for name in data['field_names'] %}
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>
+                            <select>
+                                {% for _name in data['file_names'] %}
+                                    <option value="{{ name }}">{{ _name }}</option>
+                                {% endfor %}
+                            </select>
+                            <td>
+                                <select>
+                                    {% for _name in data['previous_names'] %}
+                                        <option value="{{ name }}">{{ _name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    {% for _name in data['previous_names'] %}
+                                        <option value="{{ name }}">{{ _name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <BUTTON type="submit" onclick="http://127.0.0.1:5000/submit" value="">
+                            Submit
+                        </BUTTON>
+                    </td>
+                </tr>
+            </form>
+    </tbody>
+    </table>
