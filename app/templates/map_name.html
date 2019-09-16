@@ -12,12 +12,12 @@
 
     <table class="table table-striped">
         <tbody>
-            <form name="form" action="/select_files" method="POST">
+            <form name="form" action="/join_tables" method="POST">
                 <tr>
                     <td>GL_ACCOUNT</td>
                     <td>
                     <select name="GL_ACCOUNT">
-                        {% for item in data %}
+                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['GL_ACCOUNT']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -27,7 +27,7 @@
                     <td>JOURNAL_ID</td>
                     <td>
                     <select name="JOURNAL_ID">
-                        {% for item in data %}
+                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['JOURNAL_ID']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -37,7 +37,7 @@
                     <td>USER_ID</td>
                     <td>
                     <select name="USER_ID">
-                        {% for item in data %}
+                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['USER_ID']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -47,7 +47,7 @@
                     <td>FSLI</td>
                     <td>
                     <select name="FSLI">
-                        {% for item in data %}
+                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['FSLI']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>

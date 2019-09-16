@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Extraction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+    <table class="table table-striped">
+        <thead>
+            <td><b>Field</b></td>
+            <td><b>Source file</b></td>
+            <td><b>Previous name</b></td>
+            <td><b>Primary Key</b></td>
+            <td><b>Foreign Key</b></td>
+        </thead>
+        <tbody>
+            <form name = "form" action="/submit" method="POST">
+                {% for name in data['field_names'] %}
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>
+                            <select name={{ name ~ " - Source File" }}>
+                                {% for _name in data['file_names'] %}
+                                    <option value="{{ name }}">{{ _name }}</option>
+                                {% endfor %}
+                            </select>
+                            <td>
+                                <select name={{ name ~ " - Previous Name" }}>
+                                    {% for _name in data['previous_names'] %}
+                                        <option value="{{ name }}">{{ _name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                            <td>
+                                <select name={{ name ~ " - Primary Key" }}>
+                                    {% for _name in data['master_fields'] %}
+                                        <option value="{{ name }}">{{ _name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                            <td>
+                                <select name={{ name ~ " - Foreign Key" }}>
+                                    {% for _name in data['foreign_keys'] %}
+                                        <option value="{{ name }}">{{ _name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="submit">
+                    </td>
+                </tr>
+            </form>
+    </tbody>
+    </table>

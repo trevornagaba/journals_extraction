@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Extraction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+    <table class="table table-striped">
+        <tbody>
+            <form name="form" action="/transform" method="POST">
+                <tr>
+                    <td>GL_ACCOUNT</td>
+                    <td>
+                    <select name="GL_ACCOUNT-primary">
+                        {% for item in data['dummy_master_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="GL_ACCOUNT-secondary">
+                        {% for item in data['dummy_secondary_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>JOURNAL_ID</td>
+                    <td>
+                    <select name="JOURNAL_ID-primary">
+                        {% for item in data['dummy_master_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="JOURNAL_ID-secondary">
+                        {% for item in data['dummy_secondary_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>USER_ID</td>
+                    <td>
+                    <select name="USER_ID-primary">
+                        {% for item in data['dummy_master_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="USER_ID-secondary">
+                        {% for item in data['dummy_secondary_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>FSLI</td>
+                    <td>
+                    <select name="FSLI-primary">
+                        {% for item in data['dummy_master_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="FSLI-secondary">
+                        {% for item in data['dummy_secondary_fields'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td> 
+                </tr>
+                <input type="hidden" name="mapping_data" value={{ data['mapping_data'] }}>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="submit">
+                    </td>
+                </tr>
+            </form>
+    </tbody>
+    </table>
+
+
