@@ -54,6 +54,46 @@
                     </td>  
                 </tr>
                 <tr>
+                    <td>EFFECTIVE_DATE</td>
+                    <td>
+                    <select name="EFFECTIVE_DATE">
+                        {% for item in data %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>VALUE_DATE</td>
+                    <td>
+                    <select name="VALUE_DATE">
+                        {% for item in data %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION</td>
+                    <td>
+                    <select name="DESCRIPTION">
+                        {% for item in data %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>AUTO_MANUAL</td>
+                    <td>
+                    <select name="AUTO_MANUAL">
+                        {% for item in data %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>  
+                </tr>
+                <tr>
                     <td></td>
                     <td>
                         <input type="submit" value="submit">

@@ -17,14 +17,14 @@
                     <td>GL_ACCOUNT</td>
                     <td>
                     <select name="GL_ACCOUNT-primary">
-                        {% for item in data['dummy_master_fields'] %}
+                        {% for item in data['master_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
                     </td>
                     <td>
                     <select name="GL_ACCOUNT-secondary">
-                        {% for item in data['dummy_secondary_fields'] %}
+                        {% for item in data['secondary_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -34,14 +34,14 @@
                     <td>JOURNAL_ID</td>
                     <td>
                     <select name="JOURNAL_ID-primary">
-                        {% for item in data['dummy_master_fields'] %}
+                        {% for item in data['master_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
                     </td>
                     <td>
                     <select name="JOURNAL_ID-secondary">
-                        {% for item in data['dummy_secondary_fields'] %}
+                        {% for item in data['secondary_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -51,14 +51,14 @@
                     <td>USER_ID</td>
                     <td>
                     <select name="USER_ID-primary">
-                        {% for item in data['dummy_master_fields'] %}
+                        {% for item in data['master_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
                     </td>
                     <td>
                     <select name="USER_ID-secondary">
-                        {% for item in data['dummy_secondary_fields'] %}
+                        {% for item in data['secondary_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -68,14 +68,82 @@
                     <td>FSLI</td>
                     <td>
                     <select name="FSLI-primary">
-                        {% for item in data['dummy_master_fields'] %}
+                        {% for item in data['master_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
                     </td>
                     <td>
                     <select name="FSLI-secondary">
-                        {% for item in data['dummy_secondary_fields'] %}
+                        {% for item in data['secondary_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>EFFECTIVE_DATE</td>
+                    <td>
+                    <select name="EFFECTIVE_DATE-primary">
+                        {% for item in data['master_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="EFFECTIVE_DATE-secondary">
+                        {% for item in data['secondary_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>VALUE_DATE</td>
+                    <td>
+                    <select name="VALUE_DATE-primary">
+                        {% for item in data['master_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="VALUE_DATE-secondary">
+                        {% for item in data['secondary_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION</td>
+                    <td>
+                    <select name="DESCRIPTION-primary">
+                        {% for item in data['master_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="DESCRIPTION-secondary">
+                        {% for item in data['secondary_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>AUTO_MANUAL</td>
+                    <td>
+                    <select name="AUTO_MANUAL-primary">
+                        {% for item in data['master_field_names'] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                    <td>
+                    <select name="AUTO_MANUAL-secondary">
+                        {% for item in data['secondary_field_names'] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>

@@ -17,7 +17,7 @@
                     <td>GL_ACCOUNT</td>
                     <td>
                     <select name="GL_ACCOUNT">
-                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['GL_ACCOUNT']] %}
+                        {% for item in data['field_names'][data['selected_files']['GL_ACCOUNT']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -27,7 +27,7 @@
                     <td>JOURNAL_ID</td>
                     <td>
                     <select name="JOURNAL_ID">
-                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['JOURNAL_ID']] %}
+                        {% for item in data['field_names'][data['selected_files']['JOURNAL_ID']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -37,7 +37,7 @@
                     <td>USER_ID</td>
                     <td>
                     <select name="USER_ID">
-                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['USER_ID']] %}
+                        {% for item in data['field_names'][data['selected_files']['USER_ID']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
@@ -47,11 +47,51 @@
                     <td>FSLI</td>
                     <td>
                     <select name="FSLI">
-                        {% for item in data['dummy_field_names'][data['dummy_selected_files']['FSLI']] %}
+                        {% for item in data['field_names'][data['selected_files']['FSLI']] %}
                         <option value={{ item }}>{{ item }}</option>
                         {% endfor %}
                     </select>
-                    </td>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>EFFECTIVE_DATE</td>
+                    <td>
+                    <select name="EFFECTIVE_DATE">
+                        {% for item in data['field_names'][data['selected_files']['GL_ACCOUNT']] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>VALUE_DATE</td>
+                    <td>
+                    <select name="VALUE_DATE">
+                        {% for item in data['field_names'][data['selected_files']['JOURNAL_ID']] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION</td>
+                    <td>
+                    <select name="DESCRIPTION">
+                        {% for item in data['field_names'][data['selected_files']['USER_ID']] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>AUTO_MANUAL</td>
+                    <td>
+                    <select name="AUTO_MANUAL">
+                        {% for item in data['field_names'][data['selected_files']['FSLI']] %}
+                        <option value={{ item }}>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
